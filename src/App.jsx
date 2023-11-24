@@ -1,4 +1,6 @@
-import { AuthProvider } from './context/AuthProvider';
+
+import './App.css'
+import { AuthProvider } from './context/auth/AuthProvider';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -20,7 +22,7 @@ const router = createBrowserRouter([
     element: <Login />,
   },
   {
-    path: "/composetweet",
+    path: "/ComposeTweet",
     element: <ComposeTweet />,
   },
   {
@@ -58,7 +60,6 @@ function App() {
   return (
   <>
 <AuthProvider>
-  {/* <TwitterApp /> */}
   <RouterProvider router={router} />
 </AuthProvider>
   </>
